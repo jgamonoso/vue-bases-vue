@@ -1,30 +1,21 @@
+const frases = [
+    { quote: 'The night is darkest just before the dawn. And I promise you, the dawn is coming.', author: 'Harvey Dent, The Dark Knight' },
+    { quote: 'I believe what doesn’t kill you simply makes you, stranger.', author: 'The Joker, The Dark Knight' },
+    { quote: 'Your anger gives you great power. But if you let it, it will destroy you… As it almost did me', author: 'Henri Ducard, Batman Begins' },
+    { quote: 'You either die a hero or live long enough to see yourself become the villain.', author: 'Harvey Dent, The Dark Knight' },
+    { quote: 'If you’re good at something, never do it for free.', author: 'The Joker, The Dark Knight' },
+    { quote: 'Yes, father. I shall become a bat.', author: 'Bruce Wayne/Batman, Batman: Year One' },
+]
 
-
-console.log(Vue)
+console.log(frases)
 
 const app = Vue.createApp({
-    // template: `
-    // <h1>Hola mundo</h1>
-    // <p>Desde app.js</p>
-    // <p> {{ true ? 'Activo' : 'Inactivo' }} </p>
-    // `
 
     data() {
         return {
-            quote: "I'm Batman",
-            autor: 'Bruce Wayne'
+            quotes: frases
         }
     },
-    methods: {
-        changeQuote( event ) {
-            console.log('Hola mundo', event)
-            this.autor = 'Juan Gamonoso'
-            this.capitalize()
-        },
-        capitalize(){
-            this.quote = this.quote.toUpperCase()
-        }
-    }
 
 })
 

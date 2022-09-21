@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Vue.js Intro</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue.js Intro</title>
 
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    </head>
+    <body>
 
-</head>
-<body>
-    <!-- Control absoluto de este div -->
-    <div id="myApp">
-        <p> {{ quote }} </p>
-        <blockquote> -{{ autor }} </blockquote>
+        <!-- Control absoluto de este div -->
+        <div id="myApp">
+            <h1>Batman quotes</h1>
 
+            <ul>
+                <li v-for="quote in quotes">{{quote.author}}</li>
+            </ul>
+        </div>
 
-        <button v-on:click="changeQuote">
-            change quote
-        </button>
+        <script src="app.js"></script>
 
-    </div>
-
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="app.js"></script>
-
-</body>
+    </body>
 </html>
