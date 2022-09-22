@@ -18,15 +18,12 @@ const app = Vue.createApp({
         }
     },
     methods: {
-        addQuote(event){
-            if (event.key === "Enter") {
-                console.log(this.newQuote)
-                console.log(event)
+        addQuote(){
+            console.log(this.newQuote)
 
-                this.quotes.unshift({
-                    quote: this.newQuote
-                })
-            }
+            this.quotes.unshift({
+                quote: this.newQuote
+            })
         }
     }
 
